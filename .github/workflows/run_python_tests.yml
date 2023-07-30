@@ -24,7 +24,10 @@ jobs:
     - name: Install scikit-learn
       run: |
         python -m pip install scikit-learn
-    - name: Install pandas
+    - name: Install mlflow
+      run: |
+        python -m pip install mlflow
+    - name: Install pytest
       run: |
         python -m pip install pytest
     - name: Run tests
