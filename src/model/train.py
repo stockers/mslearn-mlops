@@ -38,11 +38,14 @@ def get_csvs_df(path):
 
 # TO DO: add function to split data
 def split_data():
-    X, y = df[['Pregnancies','PlasmaGlucose','DiastolicBloodPressure','TricepsThickness','SerumInsulin','BMI','DiabetesPedigree','Age']].values, df['Diabetic'].values
+    X, y = df[['Pregnancies','PlasmaGlucose','DiastolicBloodPressure',
+               'TricepsThickness','SerumInsulin','BMI','DiabetesPedigree','Age'
+              ]].values, df['Diabetic'].values
    
     # print(np.unique(y, return_counts=True))
     # (array([0, 1], dtype=int64), array([6656, 3344], dtype=int64))    
-    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
+    # X_train, X_test, y_train, y_test = train_test_split(
+    #   X, y, test_size=0.30, random_state=0)
     return train_test_split(X, y, test_size=0.30, random_state=0)
 
 
